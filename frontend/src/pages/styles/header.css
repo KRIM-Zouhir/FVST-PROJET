@@ -1,0 +1,131 @@
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #010101;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+  
+  .navigation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-sizing: border-box;
+  
+  }
+  
+  .Logo {
+    font-family: "MyFontBOLD";
+    font-size: 24px;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+    transition:transform 0.3s ease-in;
+
+  }
+  
+  .Logo:hover{
+    color: #000000;
+    transform: scale(1.01);
+    text-shadow:0 4px 6px rgba(0, 0, 0, 0.2) ;
+  
+  }
+  
+  .Nav {
+    display: flex;
+    gap: 20px;
+    font-family: 'MyFontLight';
+  }
+  
+  .Nav a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+  }
+  
+  .Nav a:hover {
+    color: #000000;
+    transform: scale(1.05);
+    
+  }
+  
+  .Nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+  }
+  
+  .Nav a:hover::after {
+    width: 100%;
+  }
+  
+  .BTN {
+    display: flex;
+    gap: 15px;
+    
+  }
+  
+  .LOGIN {
+    font-family: 'MyFontBold';
+    font-size: 12px;
+    padding: 10px 20px;
+    background-color: #00000000;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .LOGIN:hover{
+    color: #ffffff;
+    background-color: #000000;
+    transform: translateY(-3px);
+  }
+  
+  .SIGN_IN {
+    font-family: 'MyFontBold';
+    font-size: 12px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .SIGN_IN:hover{
+    color: #000000;
+    background-color: #ffffff;
+    transform: translateY(-3px);
+  }
+  
+  
+  /*.BTN button {
+    font-family: 'MyFontBold';
+    font-size: 12px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  .BTN button:hover {
+    color: #000000;
+    background-color: #ffffff;
+    transform: translateY(-3px);
+  }  
+  */

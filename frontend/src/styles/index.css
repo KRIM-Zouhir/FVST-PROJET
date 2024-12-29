@@ -1,0 +1,512 @@
+/*--------------------------------------------------------------------FONT--------------------------------------------------------------------*/
+
+
+@font-face {
+  font-family: "MyFontBold";
+  src: url("C:\\Users\\nouto\\OneDrive\\Documents\\PORTFOLIO\\mathieu-brogly.fr-1727939287\\mathieu-brogly.fr-1727939287\\my-portfolio\\src\\SFUIDisplay-Bold.ttf");
+}
+
+@font-face {
+  font-family: "MyFontLight";
+  src: url("C:\\Users\\nouto\\OneDrive\\Documents\\PORTFOLIO\\mathieu-brogly.fr-1727939287\\mathieu-brogly.fr-1727939287\\my-portfolio\\src\\SFUIDisplay-Light.ttf");
+}
+
+
+@font-face {
+  font-family: "MyFontNEW";
+  src: url("C:\Users\nouto\OneDrive\Documents\LP\PROJET\livraison-local\frontend\font\futura-bold_syteg\Futura Bold\Futura Bold.otf");
+}
+
+
+@font-face {
+  font-family: "MyFontNEWV2";
+  src: url("C:\Users\nouto\OneDrive\Documents\LP\PROJET\livraison-local\frontend\font\Poppins\Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "MyFontNEWV3";
+  src: url("C:\Users\nouto\OneDrive\Documents\LP\PROJET\livraison-local\frontend\font\DALF.otf");
+}
+
+
+
+/*--------------------------------------------------------------------TRANSITION--------------------------------------------------------------------*/
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+/*--------------------------------------------------------------------BODY--------------------------------------------------------------------*/
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+
+
+
+/*--------------------------------------------------------------------HEADER--------------------------------------------------------------------*/
+
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: #010101;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-sizing: border-box;
+
+}
+
+.Logo {
+  font-family: "MyFontBOLD";
+  font-size: 24px;
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+}
+
+.Logo:hover{
+  color: #000000;
+  transition:transform 0.3s ease-in;
+  transform: scale(1.01);
+  text-shadow:0 4px 6px rgba(0, 0, 0, 0.2) ;
+
+}
+
+.Nav {
+  display: flex;
+  gap: 20px;
+  font-family: 'MyFontLight';
+}
+
+.Nav a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.Nav a:hover {
+  color: #000000;
+  transform: scale(1.05);
+  
+}
+
+.Nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+
+.Nav a:hover::after {
+  width: 100%;
+}
+
+.BTN {
+  display: flex;
+  gap: 15px;
+  
+}
+
+.LOGIN {
+  font-family: 'MyFontBold';
+  font-size: 12px;
+  padding: 10px 20px;
+  background-color: #00000000;
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.LOGIN:hover{
+  color: #ffffff;
+  background-color: #000000;
+  transform: translateY(-3px);
+}
+
+.SIGN_IN {
+  font-family: 'MyFontBold';
+  font-size: 12px;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.SIGN_IN:hover{
+  color: #000000;
+  background-color: #ffffff;
+  transform: translateY(-3px);
+}
+
+
+/*.BTN button {
+  font-family: 'MyFontBold';
+  font-size: 12px;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.BTN button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  transform: translateY(-3px);
+}  
+*/
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------MAIN--------------------------------------------------------------------*/
+
+
+/* Main Section */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.location {
+  width: 70%; /* Adjust the width */
+  transition: width 20s ease-in;
+}
+
+.location:focus{
+  width: 75%;
+}
+
+.destination{
+  width: 70%;
+  transition: width 20s ease-in;
+}
+.destination:focus{
+  width: 75%;
+}
+
+.INPUT1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 100%;
+  width: 80%;
+}
+
+.INPUT2 {
+  flex: 1;
+}
+
+.SLOGAN {
+  padding-right: 20px;
+  font-family: "MyFontBold";
+  font-size: 38px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.SEARCH {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  margin-bottom: 30px;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.SEARCH input {
+  flex: 1;
+  padding: 15px;
+  font-size: 15px;
+  border: 1px solid #cccccc6a;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.SEARCH input:focus {
+  border-color: #000000;
+  outline: none;
+}
+
+.DATE, .TIME1{
+  font-family: 'MyFontLight';
+  width: 50%;
+}
+.TIME {
+  display: flex;
+  gap: 10px;
+  width: 50%;
+}
+
+.BTN_SEARCH {
+  
+  align-self: flex-start; /* Align the button to the left */
+  margin-top: 5px; /* Add some space above the button */
+  
+  text-shadow:0 4px 6px rgba(0, 0, 0, 0.2) ;
+  font-family: "MyFontBold";
+  padding: 15px 15px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+}
+
+.BTN_SEARCH:hover {
+  color: #000000;
+  background-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Map Section */
+.MAP {
+  flex: 1;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: slideIn 1s ease-out;
+  z-index: 1;
+}
+
+.MAP:hover{
+  transform: scale(1.01);
+  transition: transform 0.3s ease-in;
+}
+
+
+.map-container {
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.autocomplete-container {
+  position: relative;
+}
+
+.autocomplete-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.autocomplete-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.autocomplete-suggestion {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.autocomplete-suggestion:hover {
+  background-color: #f1f1f1;
+}
+
+.MAP {
+  flex: 1;
+  height: 400px;  /* Adjust the height to your desired size */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: slideIn 1s ease-out;
+}
+
+.MAP iframe, .leaflet-container {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
+/*--------------------------------------------------------------------SECOND-PART--------------------------------------------------------------------*/
+
+.SECOND_PART {
+
+  padding: 60px;
+  box-sizing: border-box;
+  background-color: #000000;
+  box-shadow: 
+    0px -5px 15px rgba(0, 0, 0, 0.4), /* Shadow going up */
+    0px 5px 15px rgba(0, 0, 0, 0.4);  /* Shadow going down */
+  z-index: 50; /* z-index accepts integers, not px */
+}
+.Container3{
+  padding: 50px 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 100%;
+  width: 80%;
+  z-index: 50;
+}
+
+.IMG {
+  width: 0%;
+  /* height: 400px;  /* Adjust the height to your desired size */
+  border-radius: 10px;
+  gap: 25px;
+  overflow: hidden;
+  animation: slideIn 1s ease-out;
+  
+}
+
+.IMG:hover{
+  transform: scale(1.01);
+  transition: transform 0.3s ease-in;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
+  
+}
+
+
+.TITLE2 {
+  font-family: "MyFontBold";
+  font-size: 38px;
+  margin: 20px 0;
+  padding-bottom: 10px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.TITLEP {
+  font-family: "MyFontLight";
+  margin: 20px 0;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  animation: fadeIn 1.2s ease-out;
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------------THIRD-PART--------------------------------------------------------------------*/
+
+
+.THIRD_PART {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 400px;
+  box-sizing: border-box;
+
+  color: #000000;
+  background-color: #ffffff;
+  z-index: -20;
+}
+
+
+.Container4{
+ /*tt*/
+}
+
+
+.TITLE3 {
+  font-family: "MyFontBold";
+  padding-left: 10px ;
+  margin-right: 50px;
+  font-size: 38px;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.TITLEP2 {
+  font-family: "MyFontLight";
+  gap: 20px;
+  padding-left: 20px ;
+  padding-right: 50px;
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeIn 1.2s ease-out;
+}
+

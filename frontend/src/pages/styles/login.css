@@ -1,0 +1,139 @@
+.LoginPage {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 40px 40px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.2s ease-out;
+  font-family: "MyFontNEWV3", sans-serif;
+}
+
+.LoginPage h1 {
+  margin: 40px 0;
+  font-family: "MyFontBold";
+  font-size: 32px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  transition:transform 0.3s ease-in;
+
+}
+
+.LoginPage h1:hover{
+  color: #000000;
+  transition:transform 0.3s ease-in;
+  transform: scale(1.01);
+  text-shadow:0 4px 6px rgba(0, 0, 0, 0.2) ;
+}
+
+.LoginPage form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.LoginPage label {
+  font-family: "MyFontLight";
+  font-size: 18px;
+  color: #333;
+  transition: transform 0.3s ease-in;
+}
+
+.LoginPage label:hover{
+  color: #000000;
+  transform: scale(1.01);
+}
+
+.LoginPage input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1.5px solid #cccccc6a;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff56;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.LoginPage input:focus {
+  border-color: #000000;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Links{
+  margin: 10px 0 ;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.Links1{
+  font-family: 'MyfontLight';
+  font-size: 16px;
+  color: #000000;
+  text-align: right;
+  padding-right: 5px;
+  transition: transform 0.3s ease-in;
+  z-index: 1;
+}
+
+.Links1:hover{
+  color: #000000;
+  transform: scale(1.01);
+}
+
+.Links2{
+  font-family: 'MyfontLight';
+  font-size: 16px;
+  color: #000000;
+  text-align: left;
+  padding-right: 5px;
+  transition: transform 0.3s ease-in;
+  z-index: 1;
+}
+
+.Links2:hover{
+  color: #000000;
+  transform: scale(1.01);
+}
+
+.LoginPage button {
+  font-family: "MyFontBold";
+  font-size: 16px;
+  padding: 12px;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.LoginPage button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateY(-3px);
+}
+
+.LoginPage .extra-links {
+  text-align: center;
+  font-size: 14px;
+  font-family: "MyFontLight";
+  color: #666;
+}
+
+.LoginPage .extra-links a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.LoginPage .extra-links a:hover {
+  color: #333;
+  transform: scale(1.05);
+}

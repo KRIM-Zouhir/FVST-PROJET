@@ -1,0 +1,197 @@
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.Logo {
+  font-family: 'MyFontBold' ;
+  font-size: 28px;
+}
+
+
+.NavBar {
+  font-family: 'MyFontBold' ;
+  font-size: 20px;
+  color: #DDF344 ;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  display: flex;
+  gap: 24px;
+}
+
+.NavBar:after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #DDF344;
+  transition: width 0.3s ease;
+}
+
+.NavBar:hover::after {
+  width: 100%;
+}
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: #010101;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+/*header nav {
+  display: flex;
+  gap: 24px;
+}
+
+header nav a {
+  font-size: 1rem;
+  color: #DDF344 ;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #DDF344;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}*/
+
+header .actions {
+  display: flex;
+  gap: 16px;
+}
+
+header .actions button {
+  background: white;
+  color: #2563eb;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header .actions button:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* Main Section */
+main {
+  margin-top: 80px;
+}
+
+main .hero {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 48px 0;
+}
+
+main .hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+main .hero .form {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main .hero .form input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+main .hero .form button {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+main .hero .form button:hover {
+  background: #1e3a8a;
+}
+
+/* Map Section */
+main .map {
+  width: 100%;
+  height: 400px;
+  margin-top: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  main .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  main .hero .form {
+    width: 48%;
+  }
+
+  main .map {
+    width: 48%;
+    margin-top: 0;
+  }
+}

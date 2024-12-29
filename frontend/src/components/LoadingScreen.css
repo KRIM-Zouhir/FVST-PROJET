@@ -1,0 +1,64 @@
+/* src/components/LoadingScreen.css */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    z-index: 9999;
+    flex-direction: column;
+    font-family: 'MyFontBold', sans-serif;
+    transition: transform 1s ease-out;
+  }
+  
+  .loading-bar-container {
+    width: 30%;
+    background-color: #333;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .loading-bar {
+    height: 100%;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+  }
+  
+  .loading-text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .dots {
+    animation: dot-blink 1.5s steps(5, start) infinite;
+  }
+  
+  /* Create an animation to blink the dots */
+  @keyframes dot-blink {
+    0% {
+      content: '';
+    }
+    20% {
+      content: '.';
+    }
+    40% {
+      content: '..';
+    }
+    60% {
+      content: '...';
+    }
+    80% {
+      content: '..';
+    }
+    100% {
+      content: '.';
+    }
+  }
+  

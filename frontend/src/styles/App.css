@@ -1,0 +1,9 @@
+/* src/styles/App.css */
+.home-screen.slide-up {
+    transform: translateY(-100%); /* Moves the screen from bottom to top */
+    opacity: 1;
+  }
+  
+  .loading-screen {
+    transform: translateY(100%); /* Moves the loading screen up out of view */
+  }
