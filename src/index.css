@@ -1,13 +1,269 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=UberMove:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gray-50: #f9f9f9;
+  --gray-100: #f3f3f3;
+  --gray-200: #e5e5e5;
+  --gray-300: #d4d4d4;
+  --gray-400: #a3a3a3;
+  --gray-500: #737373;
+  --gray-600: #525252;
+  --gray-700: #404040;
+  --gray-800: #262626;
+  --gray-900: #171717;
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--gray-800);
+  background-color: var(--gray-50);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'UberMove', 'Inter', sans-serif;
+  letter-spacing: -0.04em;
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    @apply bg-primary-50 text-primary-900 font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+  
+  h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  
+  h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    line-height: 1.4;
+    color: #545454;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary-900 text-white hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-900;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-primary-900 border-primary-200 hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-900;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-elegant p-6 transition-all duration-200 hover:shadow-luxe;
+  }
+
+  .input {
+    @apply block w-full rounded-md border-primary-300 shadow-sm focus:border-primary-900 focus:ring focus:ring-primary-900 focus:ring-opacity-20;
+  }
+
+  .nav-link {
+    @apply text-primary-600 hover:text-primary-900 font-medium transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .error-message {
+    @apply mt-2 text-sm text-red-600;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-gray-900 mb-4;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  }
+
+  /* Buttons */
+  .btn-luxury {
+    @apply px-6 py-3 bg-black text-white font-semibold rounded-md shadow-md transition-all duration-300 hover:bg-gray-900 hover:shadow-lg;
+  }
+  
+  .btn-luxury-outline {
+    @apply px-6 py-3 bg-transparent text-black font-semibold rounded-md border border-black shadow-sm transition-all duration-300 hover:bg-gray-100 hover:shadow-md;
+  }
+  
+  /* Cards and Containers */
+  .luxury-card {
+    @apply bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .luxury-container {
+    @apply max-w-full md:px-8 lg:px-12 xl:px-16 mx-auto;
+  }
+  
+  /* Form Elements */
+  .luxury-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black;
+  }
+  
+  .luxury-select {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-black focus:border-black;
+  }
+  
+  .luxury-checkbox {
+    @apply rounded border-gray-300 text-black focus:ring-black;
+  }
+  
+  /* Typography */
+  .heading-elegant {
+    @apply font-playfair font-bold text-black;
+  }
+  
+  .subheading-elegant {
+    @apply font-inter font-medium text-gray-600;
+  }
+  
+  /* Dividers */
+  .divider-elegant {
+    @apply w-full h-px bg-gray-200 my-8;
+  }
+  
+  .divider-elegant-center {
+    @apply relative flex py-5 items-center;
+  }
+  
+  .divider-elegant-center::before,
+  .divider-elegant-center::after {
+    @apply flex-1 border-t border-gray-200;
+    content: "";
+  }
+  
+  .divider-elegant-center span {
+    @apply relative flex px-4 text-sm text-gray-500 bg-white;
+  }
+  
+  /* Background Elements */
+  .bg-pattern {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zm20.97 0l9.315 9.314-1.414 1.414L34.828 0h2.83zM22.344 0L13.03 9.314l1.414 1.414L25.172 0h-2.83zM32 0l12.142 12.142-1.414 1.414L30 .828 17.272 13.556l-1.414-1.414L28 0h4zM.284 0l28 28-1.414 1.414L0 2.544v2.12l26.586 26.586-1.414 1.414L0 7.25v2.123l24.172 24.172-1.414 1.414L0 11.96v2.12l21.758 21.76-1.414 1.413L0 16.67v2.123L19.344 37.13l-1.414 1.415L0 21.38v2.122l16.93 16.93-1.416 1.414L0 26.092v2.12l14.516 14.518-1.414 1.413L0 30.805v2.12l12.102 12.104-1.414 1.414L0 35.522v2.12l9.688 9.69-1.414 1.413L0 40.23v2.122l7.274 7.275-1.414 1.414L0 44.97v2.828l2.444 2.445-1.414 1.415L0 49.74v2.83l.83.83-.83.828v-60zM60 .828L58.586.828 60 2.242V.83zm0 2.12L56.97 0h2.83L60 .83v2.12zm0 2.12L54.556 0h2.828L60 2.83v2.12zm0 2.122L52.142 0h2.83L60 5.656v2.12zm0 2.12L49.728 0h2.828L60 8.07v2.122zm0 2.123L47.314 0h2.83L60 10.485v2.12zm0 2.12L44.9 0h2.827L60 12.907v2.12zm0 2.122L42.484 0h2.83L60 15.322v2.12zm0 2.12L40.07 0h2.83L60 17.736v2.122zm0 2.122l-22.83-22.83h2.83L60 20.15v2.12zm0 2.12l-25.244-25.242h2.83L60 22.572v2.12zm0 2.123l-27.658-27.658h2.83L60 24.985v2.122zm0 2.12L32.484 0h2.83L60 27.4v2.12zm0 2.122l-32.8-32.8h2.83L60 29.813v2.12zM30 60l-6.855-6.856 1.415-1.414 5.44 5.44 5.44-5.44 1.415 1.415L30 60zm22.485-6.857L60 59.527V56.7l-7.514-7.514v2.827zM60 54.57L52.272 46.842 53.688 45.426 60 51.74v2.83zm0-2.83l-8.485-8.485 1.415-1.414L60 49.354v2.374zm0-2.377l-10.313-10.313 1.414-1.414L60 46.94v2.414zm0-2.417L45.8 42.8l1.415-1.413L60 44.525v2.42zm0-2.423l-14.142-14.142 1.414-1.414L60 42.107v2.423zm0-2.426L41.87 39.87l1.414-1.414L60 39.67v2.436zm0-2.438l-19.799-19.8 1.414-1.413L60 37.232v2.447zm0-2.45l-22.213-22.212 1.414-1.414L60 34.783v2.456zm0-2.458l-24.627-24.628 1.414-1.414L60 32.333v2.459zm0-2.462l-27.04-27.043 1.414-1.413L60 29.874v2.463zm0-2.464L32.542 7.542l1.414-1.414L60 27.41v2.464zm0-2.467l-31.87-31.87 1.414-1.414L60 24.946v2.465zm0-2.468L30.125 5.124l1.414-1.414L60 22.48v2.467zm0-2.467L27.71 2.71 29.126 1.3 60 20.018v2.466zm0-2.47L25.295.292l1.414-1.414L60 17.55v2.468zm0-2.47l-37.556-12.56-1.41 1.414L60 15.082v2.47zm0-2.47L22.88 22.88l1.414-1.414L60 12.613v2.47zm0-2.47l-42.384-42.385 1.414-1.414L60 10.143v2.47zm0-2.47L20.465 20.464l1.414-1.415L60 7.674v2.47zm0-2.47L18.05 18.05l1.414-1.413L60 5.205v2.47zm0-2.47L15.636 15.634l1.414-1.414L60 2.736v2.47z' fill='%23000000' fill-opacity='0.025' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-950 to-primary-700;
+  }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-600);
+}
+
+/* Additional Typography Refinements */
+p {
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Custom list styling */
+ul.elegant-list {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+ul.elegant-list li {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+ul.elegant-list li::before {
+  content: "—";
+  position: absolute;
+  left: -1.5rem;
+  color: var(--gray-400);
+}
+
+/* Image styles */
+.img-luxury {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.img-luxury:hover {
+  transform: scale(1.03);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease forwards;
 }
